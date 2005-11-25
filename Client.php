@@ -54,6 +54,19 @@ define('NET_SMPP_CLIENT_STATE_BOUND_TRX', 4);
  */
 class Net_SMPP_Client
 {
+    /**
+     * Current state of the connection
+     *
+     * Certain commands alter the state of the connection, e.g. a non-error
+     * bind_transmitter_resp PDU changes the state to BOUND_TX. We keep track of
+     * the connection state here.
+     *
+     * @var  int
+     * @see  NET_SMPP_CLIENT_STATE_* constants
+     * @see  readPDU()
+     * @see  _stateSetters()
+     * @see  _commandStates()
+     */
     var $state = NET_SMPP_CLIENT_STATE_CLOSED;
 
     /**
@@ -263,13 +276,9 @@ class Net_SMPP_Client
      */
     function &readPDU()
     {
-        static $responses;
+        static $responses = 0;
 
         $map =& Net_SMPP_Client::_stateSetters();
-
-        if (!isset($responses)) {
-            $responses = 0;
-        }
 
         $this->log('Have read ' . $responses . ' response PDUs');
 
@@ -282,6 +291,7 @@ class Net_SMPP_Client
             return false;
         } else if (strlen($rawlen) === 0) {
             // No data to read
+            $this->log('No data to read');
             return false;
         }
 
@@ -320,10 +330,12 @@ class Net_SMPP_Client
         }
 
         if ($pdu->isError()) {
+            $this->log('Response PDU was an error: ' . $pdu->statusDesc());
             $this->es->push($pdu->status, 'error', array(), $pdu->statusDesc());
         } else if (array_key_exists($pdu->command,
                                     $map)) {
             $this->state = $map[$pdu->command];
+            $this->log('Command ' . $pdu->command . ' changes state to ' .  $map[$pdu->command]);
         }
         return $pdu;
     }
