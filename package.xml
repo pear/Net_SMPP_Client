@@ -39,7 +39,7 @@ Net_SMPP. It can be used to send SMS messages, among other things.
         </deps>
 
         <filelist>
-            <file role="php" baseinstalldir="Net/SMPP" name="Client.php">
+            <file role="php" baseinstalldir="/" name="Net/SMPP/Client.php">
                 <replace from="@package_version@" to="version" type="package-info"/>
             </file>
             <dir name="docs/examples" baseinstalldir="docs/Net_SMPP_Client">
