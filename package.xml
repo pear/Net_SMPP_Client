@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package packagerversion="1.9.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
-http://pear.php.net/dtd/tasks-1.0.xsd
-http://pear.php.net/dtd/package-2.0
-http://pear.php.net/dtd/package-2.0.xsd">
+<package packagerversion="1.9.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
  <name>Net_SMPP_Client</name>
  <channel>pear.php.net</channel>
  <summary>SMPP v3.4 client</summary>
@@ -13,9 +10,7 @@ Net_SMPP. It can be used to send SMS messages, among other things.
     - PDU stack keeps track of which PDUs have crossed the wire
     - Keeps track of the connection state, and won&apos;t let you send PDUs if
       the state is incorrect.
-    - Supports SMPP vendor extensions.
-    
- </description>
+    - Supports SMPP vendor extensions.</description>
  <lead>
   <name>Ian Eure</name>
   <user>ieure</user>
@@ -23,7 +18,7 @@ Net_SMPP. It can be used to send SMS messages, among other things.
   <active>yes</active>
  </lead>
  <date>2011-11-25</date>
- <time>12:30:18</time>
+ <time>23:00:58</time>
  <version>
   <release>0.3.2</release>
   <api>0.3.2</api>
@@ -37,20 +32,12 @@ Net_SMPP. It can be used to send SMS messages, among other things.
 - Initial PEAR release.
  </notes>
  <contents>
-  <dir name="/">
-   <dir name="docs">
-    <dir name="examples">
-     <file baseinstalldir="docs/Net_SMPP_Client" name="example.php" role="php" />
-    </dir> <!-- /docs/examples -->
-   </dir> <!-- /docs -->
-   <dir name="Net">
-    <dir name="SMPP">
-     <file baseinstalldir="/" name="Client.php" role="php">
-      <tasks:replace from="@package_version@" to="version" type="package-info" />
-     </file>
-    </dir> <!-- /Net/SMPP -->
-   </dir> <!-- /Net -->
-  </dir> <!-- / -->
+  <dir baseinstalldir="/" name="/">
+   <file baseinstalldir="docs/Net_SMPP_Client" md5sum="bad3bc320f68515595d008ddd51a0829" name="docs/examples/example.php" role="doc" />
+   <file baseinstalldir="/" md5sum="695c519b637cb658ad84f3584cbac78e" name="Net/SMPP/Client.php" role="php">
+    <tasks:replace from="@package_version@" to="version" type="package-info" />
+   </file>
+  </dir>
  </contents>
  <dependencies>
   <required>
@@ -81,144 +68,33 @@ Net_SMPP. It can be used to send SMS messages, among other things.
  <changelog>
   <release>
    <version>
-    <release>0.3.1</release>
-    <api>0.3.1</api>
+    <release>0.0.1dev1</release>
+    <api>0.0.1dev1</api>
    </version>
    <stability>
     <release>devel</release>
     <api>devel</api>
    </stability>
-   <date>2005-06-10</date>
+   <date>2005-04-12</date>
    <license uri="http://www.example.com">PHP License v3.0</license>
    <notes>
-- Update to use renamed constants in Net_SMPP 0.4.1
+- Split off from Net_SMPP.
+- Add state management.
    </notes>
   </release>
   <release>
    <version>
-    <release>0.3.0</release>
-    <api>0.3.0</api>
+    <release>0.0.1dev2</release>
+    <api>0.0.1dev2</api>
    </version>
    <stability>
     <release>devel</release>
     <api>devel</api>
    </stability>
-   <date>2005-06-02</date>
+   <date>2005-04-13</date>
    <license uri="http://www.example.com">PHP License v3.0</license>
    <notes>
-- Update to use the new vendor support code in Net_SMPP 0.4.0.
-   </notes>
-  </release>
-  <release>
-   <version>
-    <release>0.2.7</release>
-    <api>0.2.7</api>
-   </version>
-   <stability>
-    <release>devel</release>
-    <api>devel</api>
-   </stability>
-   <date>2005-05-04</date>
-   <license uri="http://www.example.com">PHP License v3.0</license>
-   <notes>
-- Don&apos;t set blocking mode for Net_Socket.
-   </notes>
-  </release>
-  <release>
-   <version>
-    <release>0.2.6</release>
-    <api>0.2.6</api>
-   </version>
-   <stability>
-    <release>devel</release>
-    <api>devel</api>
-   </stability>
-   <date>2005-05-04</date>
-   <license uri="http://www.example.com">PHP License v3.0</license>
-   <notes>
-- Work around buggy unpack() in older PHP versions.
-   </notes>
-  </release>
-  <release>
-   <version>
-    <release>0.2.5</release>
-    <api>0.2.5</api>
-   </version>
-   <stability>
-    <release>devel</release>
-    <api>devel</api>
-   </stability>
-   <date>2005-05-02</date>
-   <license uri="http://www.example.com">PHP License v3.0</license>
-   <notes>
-- Update dependcencies.
-- Fix syntax error in _stateSetters().
-   </notes>
-  </release>
-  <release>
-   <version>
-    <release>0.2.4</release>
-    <api>0.2.4</api>
-   </version>
-   <stability>
-    <release>devel</release>
-    <api>devel</api>
-   </stability>
-   <date>2005-04-25</date>
-   <license uri="http://www.example.com">PHP License v3.0</license>
-   <notes>
-- Move globals into static class vars.
-   </notes>
-  </release>
-  <release>
-   <version>
-    <release>0.2.3</release>
-    <api>0.2.3</api>
-   </version>
-   <stability>
-    <release>devel</release>
-    <api>devel</api>
-   </stability>
-   <date>2005-04-22</date>
-   <license uri="http://www.example.com">PHP License v3.0</license>
-   <notes>
-- Fix _errThunk().
-- Fix example.
-   </notes>
-  </release>
-  <release>
-   <version>
-    <release>0.2.2</release>
-    <api>0.2.2</api>
-   </version>
-   <stability>
-    <release>devel</release>
-    <api>devel</api>
-   </stability>
-   <date>2005-04-21</date>
-   <license uri="http://www.example.com">PHP License v3.0</license>
-   <notes>
-- Add example.
-   </notes>
-  </release>
-  <release>
-   <version>
-    <release>0.2.1</release>
-    <api>0.2.1</api>
-   </version>
-   <stability>
-    <release>devel</release>
-    <api>devel</api>
-   </stability>
-   <date>2005-04-21</date>
-   <license uri="http://www.example.com">PHP License v3.0</license>
-   <notes>
-- Fix readPDU().
-- Add some basic error handling.
-- readPDU() alters state correctly.
-- Add some debugging support.
-- Add Log support.
-- Don&apos;t die horribly when there&apos;s no data to read from the socket.
+- Add readPDU().
    </notes>
   </release>
   <release>
@@ -244,33 +120,159 @@ Net_SMPP. It can be used to send SMS messages, among other things.
   </release>
   <release>
    <version>
-    <release>0.0.1dev2</release>
-    <api>0.0.1dev2</api>
+    <release>0.2.1</release>
+    <api>0.2.1</api>
    </version>
    <stability>
     <release>devel</release>
     <api>devel</api>
    </stability>
-   <date>2005-04-13</date>
+   <date>2005-04-21</date>
    <license uri="http://www.example.com">PHP License v3.0</license>
    <notes>
-- Add readPDU().
+- Fix readPDU().
+- Add some basic error handling.
+- readPDU() alters state correctly.
+- Add some debugging support.
+- Add Log support.
+- Don&apos;t die horribly when there&apos;s no data to read from the socket.
    </notes>
   </release>
   <release>
    <version>
-    <release>0.0.1dev1</release>
-    <api>0.0.1dev1</api>
+    <release>0.2.2</release>
+    <api>0.2.2</api>
    </version>
    <stability>
     <release>devel</release>
     <api>devel</api>
    </stability>
-   <date>2005-04-12</date>
+   <date>2005-04-21</date>
    <license uri="http://www.example.com">PHP License v3.0</license>
    <notes>
-- Split off from Net_SMPP.
-- Add state management.
+- Add example.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.2.3</release>
+    <api>0.2.3</api>
+   </version>
+   <stability>
+    <release>devel</release>
+    <api>devel</api>
+   </stability>
+   <date>2005-04-22</date>
+   <license uri="http://www.example.com">PHP License v3.0</license>
+   <notes>
+- Fix _errThunk().
+- Fix example.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.2.4</release>
+    <api>0.2.4</api>
+   </version>
+   <stability>
+    <release>devel</release>
+    <api>devel</api>
+   </stability>
+   <date>2005-04-25</date>
+   <license uri="http://www.example.com">PHP License v3.0</license>
+   <notes>
+- Move globals into static class vars.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.2.5</release>
+    <api>0.2.5</api>
+   </version>
+   <stability>
+    <release>devel</release>
+    <api>devel</api>
+   </stability>
+   <date>2005-05-02</date>
+   <license uri="http://www.example.com">PHP License v3.0</license>
+   <notes>
+- Update dependcencies.
+- Fix syntax error in _stateSetters().
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.2.6</release>
+    <api>0.2.6</api>
+   </version>
+   <stability>
+    <release>devel</release>
+    <api>devel</api>
+   </stability>
+   <date>2005-05-04</date>
+   <license uri="http://www.example.com">PHP License v3.0</license>
+   <notes>
+- Work around buggy unpack() in older PHP versions.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.2.7</release>
+    <api>0.2.7</api>
+   </version>
+   <stability>
+    <release>devel</release>
+    <api>devel</api>
+   </stability>
+   <date>2005-05-04</date>
+   <license uri="http://www.example.com">PHP License v3.0</license>
+   <notes>
+- Don&apos;t set blocking mode for Net_Socket.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.3.0</release>
+    <api>0.3.0</api>
+   </version>
+   <stability>
+    <release>devel</release>
+    <api>devel</api>
+   </stability>
+   <date>2005-06-02</date>
+   <license uri="http://www.example.com">PHP License v3.0</license>
+   <notes>
+- Update to use the new vendor support code in Net_SMPP 0.4.0.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.3.1</release>
+    <api>0.3.1</api>
+   </version>
+   <stability>
+    <release>devel</release>
+    <api>devel</api>
+   </stability>
+   <date>2005-06-10</date>
+   <license uri="http://www.example.com">PHP License v3.0</license>
+   <notes>
+- Update to use renamed constants in Net_SMPP 0.4.1
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.3.2</release>
+    <api>0.3.2</api>
+   </version>
+   <stability>
+    <release>devel</release>
+    <api>devel</api>
+   </stability>
+   <date>2011-11-25</date>
+   <license>PHP License v3.0</license>
+   <notes>
+- Initial PEAR release.
    </notes>
   </release>
  </changelog>
