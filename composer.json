@@ -1,0 +1,31 @@
+{
+    "authors": [
+        {
+            "email": "ieure@php.net",
+            "name": "Ian Eure",
+            "role": "Lead"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Net_SMPP_Client": "./"
+        }
+    },
+    "description": "More info available on: http://pear.php.net/package/Net_SMPP_Client",
+    "include-path": [
+        "./"
+    ],
+    "license": "PHP License v3.0",
+    "name": "pear/net_smpp_client",
+    "support": {
+        "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=Net_SMPP_Client",
+        "source": "https://github.com/pear/Net_SMPP_Client"
+    },
+    "type": "library",
+    "require": {
+        "pear/pear_exception": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}
