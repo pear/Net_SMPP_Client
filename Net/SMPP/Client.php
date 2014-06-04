@@ -53,6 +53,8 @@ class Net_SMPP_Client
     const STATE_BOUND_RX = 3;
     const STATE_BOUND_TRX = 4;
 
+    const LOG_DEBUG = 7; // Same as PEAR_LOG_DEBUG - https://github.com/pear/Log/blob/master/Log.php
+
     /**
      * Current state of the connection
      *
@@ -348,7 +350,7 @@ class Net_SMPP_Client
      * @access  private
      * @return  void
      */
-    function log($msg, $level = PEAR_LOG_DEBUG)
+    function log($msg, $level = Net_SMPP_Client::LOG_DEBUG)
     {
         if (isset($this->log) && is_object($this->log)) {
             $this->log->log($msg, $level);

@@ -18,9 +18,9 @@ Net_SMPP. It can be used to send SMS messages, among other things.
   <active>yes</active>
  </lead>
  <date>2014-06-04</date>
- <time>11:44:22</time>
+ <time>12:20:17</time>
  <version>
-  <release>0.4.0</release>
+  <release>0.4.1</release>
   <api>0.4.0</api>
  </version>
  <stability>
@@ -30,13 +30,13 @@ Net_SMPP. It can be used to send SMS messages, among other things.
  <license>PHP License v3.0</license>
  <notes>
 QA release
-Upgrade to package 2.0
-Upgrade to PHP5+
+
+Fix PEAR_LOG_DEBUG warning
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
    <file baseinstalldir="docs/Net_SMPP_Client" md5sum="8e26dcc5c1cb6f820b8319be825aab3a" name="docs/examples/example.php" role="doc" />
-   <file baseinstalldir="/" md5sum="be0b5a47576388e51a99b5ccd1fdce99" name="Net/SMPP/Client.php" role="php">
+   <file baseinstalldir="/" md5sum="09922560bbbd5ec98f9811a2c3bdd609" name="Net/SMPP/Client.php" role="php">
     <tasks:replace from="@package_version@" to="version" type="package-info" />
    </file>
    <file baseinstalldir="/" md5sum="ffaf450ca962bc45e32b112c05166967" name="README" role="data" />
@@ -293,6 +293,23 @@ Upgrade to PHP5+
 QA release
 Upgrade to package 2.0
 Upgrade to PHP5+
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.4.1</release>
+    <api>0.4.0</api>
+   </version>
+   <stability>
+    <release>devel</release>
+    <api>devel</api>
+   </stability>
+   <date>2014-06-04</date>
+   <license>PHP License v3.0</license>
+   <notes>
+QA release
+
+Fix PEAR_LOG_DEBUG warning
    </notes>
   </release>
  </changelog>
