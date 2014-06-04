@@ -17,11 +17,11 @@ Net_SMPP. It can be used to send SMS messages, among other things.
   <email>ieure@php.net</email>
   <active>yes</active>
  </lead>
- <date>2011-11-25</date>
- <time>23:00:58</time>
+ <date>2014-06-04</date>
+ <time>11:44:22</time>
  <version>
-  <release>0.3.2</release>
-  <api>0.3.2</api>
+  <release>0.4.0</release>
+  <api>0.4.0</api>
  </version>
  <stability>
   <release>devel</release>
@@ -29,20 +29,24 @@ Net_SMPP. It can be used to send SMS messages, among other things.
  </stability>
  <license>PHP License v3.0</license>
  <notes>
-- Initial PEAR release.
+QA release
+Upgrade to package 2.0
+Upgrade to PHP5+
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
-   <file baseinstalldir="docs/Net_SMPP_Client" md5sum="bad3bc320f68515595d008ddd51a0829" name="docs/examples/example.php" role="doc" />
-   <file baseinstalldir="/" md5sum="695c519b637cb658ad84f3584cbac78e" name="Net/SMPP/Client.php" role="php">
+   <file baseinstalldir="docs/Net_SMPP_Client" md5sum="8e26dcc5c1cb6f820b8319be825aab3a" name="docs/examples/example.php" role="doc" />
+   <file baseinstalldir="/" md5sum="be0b5a47576388e51a99b5ccd1fdce99" name="Net/SMPP/Client.php" role="php">
     <tasks:replace from="@package_version@" to="version" type="package-info" />
    </file>
+   <file baseinstalldir="/" md5sum="ec9b9d2a222b2644a9aa8db2ea7a8585" name="composer.json" role="data" />
+   <file baseinstalldir="/" md5sum="ffaf450ca962bc45e32b112c05166967" name="README" role="data" />
   </dir>
  </contents>
  <dependencies>
   <required>
    <php>
-    <min>4.1.0</min>
+    <min>5.0.0</min>
    </php>
    <pearinstaller>
     <min>1.4.0b1</min>
@@ -273,6 +277,23 @@ Net_SMPP. It can be used to send SMS messages, among other things.
    <license>PHP License v3.0</license>
    <notes>
 - Initial PEAR release.
+   </notes>
+  </release>
+  <release>
+   <version>
+    <release>0.4.0</release>
+    <api>0.4.0</api>
+   </version>
+   <stability>
+    <release>devel</release>
+    <api>devel</api>
+   </stability>
+   <date>2014-06-04</date>
+   <license>PHP License v3.0</license>
+   <notes>
+QA release
+Upgrade to package 2.0
+Upgrade to PHP5+
    </notes>
   </release>
  </changelog>
