@@ -494,4 +494,3 @@ class Net_SMPP_Client
         return $setters;
     }
 }
-?>

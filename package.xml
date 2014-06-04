@@ -39,7 +39,6 @@ Upgrade to PHP5+
    <file baseinstalldir="/" md5sum="be0b5a47576388e51a99b5ccd1fdce99" name="Net/SMPP/Client.php" role="php">
     <tasks:replace from="@package_version@" to="version" type="package-info" />
    </file>
-   <file baseinstalldir="/" md5sum="ec9b9d2a222b2644a9aa8db2ea7a8585" name="composer.json" role="data" />
    <file baseinstalldir="/" md5sum="ffaf450ca962bc45e32b112c05166967" name="README" role="data" />
   </dir>
  </contents>
@@ -49,7 +48,7 @@ Upgrade to PHP5+
     <min>5.0.0</min>
    </php>
    <pearinstaller>
-    <min>1.4.0b1</min>
+    <min>1.5.6</min>
    </pearinstaller>
    <package>
     <name>PEAR</name>
